@@ -1,0 +1,47 @@
+@import url('style.css');
+
+#options{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+.input-checkbox{
+    width: 24px;
+    height: 24px;
+    font-weight: bold;
+    color: var(--text-light);
+    border: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-light);
+}
+
+.input-checkbox input{
+    width: 16px;
+    height: 16px;
+    outline: 2px solid var(--text-light);
+}
+
+.input-checkbox label{padding-left: 1rem;}
+
+.input-checkbox input:checked{
+
+}
+
+.btn-confirm{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--blue-light);
+    font-weight: bold;
+}
+
+.link:hover{color: var(--blue-dark);}
