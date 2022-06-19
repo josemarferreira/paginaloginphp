@@ -1,0 +1,17 @@
+@import url('style.css');
+
+#logado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#logado h1{font-size: 4.8rem;}
+#logado h2{
+    font-size: 3.6rem;
+    margin-top: 5px;
+}
+
+#logado button { margin-top: 30px;}
