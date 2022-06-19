@@ -1,5 +1,6 @@
 @import url('style.css');
 
+#form-group{margin-top: 30px;}
 #options{
     width: 100%;
     display: flex;
@@ -8,40 +9,35 @@
     font-size: 1.4rem;
 }
 
-.input-checkbox{
-    width: 24px;
-    height: 24px;
-    font-weight: bold;
-    color: var(--text-light);
-    border: 5px;
-    border-radius: 5px;
+#remember{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--text-light);
 }
 
-.input-checkbox input{
-    width: 16px;
-    height: 16px;
-    outline: 2px solid var(--text-light);
-}
-
-.input-checkbox label{padding-left: 1rem;}
-
-.input-checkbox input:checked{
-
-}
-
-.btn-confirm{
-    margin: 30px auto;
-    text-align: center;
-}
-
-.link{
-    text-decoration: none;
-    color: var(--blue-light);
+#remember label{
+    padding-left: 1rem;
     font-weight: bold;
 }
 
-.link:hover{color: var(--blue-dark);}
+@media screen and (max-width: 767px)  {
+    #options{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #options{
+        flex-direction: column-reverse;
+    }
+
+    #remember { 
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+    .link{
+        margin-top: -10px;
+        align-self: flex-end;
+    }
+}

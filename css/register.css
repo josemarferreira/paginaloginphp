@@ -1,0 +1,24 @@
+
+/* INPUT NOMES */
+.input-nome{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-nome .input-group{width: 48%;}
+
+
+@media screen and (max-width: 1024px) {
+    .input-nome{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .input-nome .input-group{width: 100%;} 
+}
+@media screen and (min-width: 320px) {
+   .btn{width: 200px;}
+}

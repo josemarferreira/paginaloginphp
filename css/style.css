@@ -77,12 +77,13 @@ body{
 
 #menu a:hover{ color: var(--blue-light);}
 
-/* CONTEUDO */
+/* CONTAINER */
 .container{
     width: 100%;
     padding: 10rem 6.5rem;
 }
 
+/* CABEÇALHO SEÇÕES DO SITE */
 #banner{
     width: 100%;
     height: 140px;
@@ -115,26 +116,20 @@ body{
 
 #banner a:hover { color: var(--blue-dark);}
 
-/* FORMULÁRIO */
+/* FORMULÁRIOS */
 #form-group{
-    width: 40%;
+    width: 50%;
     margin: 15px 0;
 }
 
-.input-nome{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.input-nome .input-group{width: 48%;}
-
-
-/* Caixa de Textos */
+/* CAIXA DE TEXTOS */
 .input-group{
     width: 100%;
     position: relative;
     margin-top: 15px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: var(--bg-input);
 }
 
 .input-group input{
@@ -142,16 +137,14 @@ body{
     padding: 30px 20px 10px 20px;
     border: none;
     background-color: var(--bg-input);
-    width: 100%;
+    width: 85%;
     color: var(--text-light);
-    font-weight: bold;
     border-radius: 10px;
+    outline: none;
 }
 
 .input-group:hover,
-.input-group:focus-within{
-    border-color: var(--blue-light);
-}
+.input-group:focus-within{border-color: var(--blue-light);}
 
 .input-group label{
     font-size: 1.4rem;
@@ -189,12 +182,34 @@ body{
 
 .iconify[data-icon="bi:eye-fill"] { cursor: pointer;}
 
+/* CHECKBOX */
+.input-checkbox{
+    width: 24px;
+    height: 24px;
+    font-weight: bold;
+    color: var(--text-light);
+    border: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-light);
+}
+
+.input-checkbox input{
+    width: 16px;
+    height: 16px;
+    outline: 2px solid var(--text-light);
+}
+.input-checkbox label{padding-left: 1rem;}
+
+
 /* BOTÕES */
 #button{
     width: 100%;
     display: flex;
     margin-top: 30px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .btn{
@@ -209,10 +224,100 @@ body{
     cursor: pointer;
 }
 
-.btn-change,.btn-change:active{background-color: var(--icon-color);}
-.btn-change:hover{background-color: var(--text-dark);}
-
 .btn-confirm{background-color: var(--btn-confirm);}
 .btn-confirm:hover{background-color: var(--blue-light);}
 
 .btn:active{box-shadow:inset 2px 2px 4px rgba(39,42,55, 0.8);}
+
+/* LINKS */
+.link{
+    text-decoration: none;
+    color: var(--blue-light);
+    font-weight: bold;
+}
+
+.link:hover{color: var(--blue-dark);}
+
+
+@media screen and (max-width: 1024px) {
+    #form-group{width: 60%;}
+}
+
+@media screen and (max-width: 767px) {
+    #menu{display: none;}
+    .container{padding: 5rem 4rem;}
+
+    #top{
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+    }
+
+    #banner{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    #banner h1 {
+        font-size: 3rem;
+        margin: 15px 0;
+    }
+
+    #banner h3 {font-size: 1.6rem;}
+
+    #form-group{
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .input-group input{ 
+        font-size: 1.4rem;
+        width: 80%;
+    }
+
+    .btn{width: 150px;}
+}
+
+@media screen and (max-width: 350px){
+    #menu{display: none;}
+    .container{padding: 5rem 4rem;}
+
+    #top{
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+    }
+
+    #banner{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    #banner h1 {
+        font-size: 3rem;
+        margin: 15px auto;
+    }
+
+    #banner h3 {font-size: 1.6rem;}
+    #banner p{font-size: 1.2rem;}
+
+    #form-group{
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .input-group input{ 
+        font-size: 1.4rem;
+        width: 80%;
+    }
+
+    .link{font-size: 1.2rem;}
+
+    .btn{width: 150px;}
+}
