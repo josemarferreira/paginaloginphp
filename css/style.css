@@ -26,7 +26,7 @@ body{
     background: url('../img/fundo_max.jpg') center/cover;
 }
 
-#fundo{
+#fundo, #logado{
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(45deg, var(--gradient-dark) 0%,var(--gradient-dark) 45%, var(--gradient-trans) 100%);
