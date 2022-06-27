@@ -8,6 +8,8 @@
     --bg-input: #323644;
     --btn-confirm: #1D90F5;
     --icon-color: #595B63;
+    --danger: #e63946;
+    --success: #9ef01a;
 }
 
 *{
@@ -160,9 +162,8 @@ body{
 .input-group:focus-within label{color: var(--blue-light);}
 
 /* Icone Nome do Usuário */
-.iconify{
-    width: 24px;
-    height: 24px;
+.bi{
+    font-size: 20px;
     position: absolute;
     top: 50%;
     right: 20px;
@@ -173,14 +174,56 @@ body{
 }
 
 /* Icones Email e Senha */
-.iconify[data-icon="dashicons:email"],
-.iconify[data-icon="bi:eye-fill"]
+.bi-envelope-fill,
+.bi-eye-fill, 
+.bi-eye-slash-fill
 {
     color: var(--text-light);
     background: transparent;
+    z-index: 1;
+    cursor: pointer;
 }
 
-.iconify[data-icon="bi:eye-fill"] { cursor: pointer;}
+/* CAIXA ERROS */
+.erro, .erro:hover, .erro:focus-within {border-color: var(--danger);}
+.erro label,
+.erro:focus-within label,
+.erro span { color: var(--danger);}
+
+#info_email, #info_senha{
+    font-size: 1.2rem;
+    padding: 5px;
+    color: var(--danger);
+}
+
+/* MODAL ERRO */
+#modal {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(39,42,55, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content{
+    width: 350px;
+    padding: 30px;
+    background-color: var(--bg-input);
+    color: var(--text-light);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    line-height: 24px;
+}
 
 /* CHECKBOX */
 .input-checkbox{
@@ -222,6 +265,11 @@ body{
     font-size: 1.65rem;
     box-shadow: 2px 2px 4px rgba(39,42,55, 0.5);
     cursor: pointer;
+}
+
+.btn-modal{
+    margin-top: 15px;
+    background-color: var(--danger);
 }
 
 .btn-confirm{background-color: var(--btn-confirm);}
