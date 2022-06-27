@@ -1,7 +1,11 @@
 <?php
     session_start();
 
-    var_dump($_SESSION['usuario']);
+    if(isset($_POST['sair'])){
+        echo "ok";
+        session_destroy();
+        header("Location:index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +27,7 @@
         <form action="logado.php" method="post">
             <h1>Welcome<span class="dot">!</span></h1>
             <h2>Josemar Souza</h2>
-            <button type="submit" class="btn btn-confirm">Sign Out</button>
+            <button type="submit" class="btn btn-confirm" name="sair">Sign Out</button>
         </form>      
     </div>
 </body>

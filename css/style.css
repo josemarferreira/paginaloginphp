@@ -202,7 +202,6 @@ body{
     max-height: 100%;
     width: 100vw;
     min-height: 100vh;
-    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -214,7 +213,7 @@ body{
 
 .modal-content{
     width: 350px;
-    padding: 30px;
+    padding: 40px;
     background-color: var(--bg-input);
     color: var(--text-light);
     border-radius: 10px;
@@ -223,6 +222,7 @@ body{
     align-items: center;
     font-weight: bold;
     line-height: 24px;
+    z-index: 2;
 }
 
 /* CHECKBOX */
