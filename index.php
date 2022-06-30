@@ -16,8 +16,9 @@
                 // inicia sessão e armazena nome do usuário
                 // e redireciona para a página de logado
                 session_start();
-                $_SESSION['usuario'] = $login;
-                echo $save;
+                $_SESSION['first_name'] = $login['first_name'];
+                $_SESSION['last_name'] = $login['last_name'];
+
                 header('Location:logado.php');
             }
             // caso a senha esteja errada
@@ -28,15 +29,16 @@
         }
         // Caso o usuário ou a senha esteja inválida informa o usuário
         else{
+            $email = "";
+           $password = "";
+           $erro = false;
             echo '<div id="modal">
                 <div class="modal-content">
                     <p>Your email or password is invalid </p>
                     <input type="button" id="fechar" value="Try Again..." class="btn btn-modal">
                 </div>
             </div>';
-           $email = "";
-           $password = "";
-           $erro = false;
+           
         }
     }
 ?>
@@ -62,8 +64,8 @@
                 <p class="text-logo">Anywhere app<span class="dot">.</span></p>
             </div>
             <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Join</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="register.php">Join</a></li>
             </ul>
         </header>
 
@@ -71,12 +73,12 @@
             <header id="banner">
                 <h3>START FOR FREE</h3>
                 <h1>Sign in to Anywhere app<span class="dot">.</span></h1>
-                <p>Not a member? <a href="register.html">Sign up now</a></p>
+                <p>Not a member? <a href="register.php">Sign up now</a></p>
             </header>
 
             <form action="index.php" method="post" id="form-group">
                 <div class="input-group" id='mail'>
-                    <input type="email" name="email" id="email" value="<?php echo $email; ?>">
+                    <input type="text" name="email" id="email" value="<?php echo $email; ?>">
                     <label for="email">Email</label>
                     <span><i class="bi bi-envelope-fill"></i></span>
                 </div>

@@ -1,5 +1,6 @@
 // const pwd = document.getElementById('password');
 const eye = document.getElementById('eye');
+const senhaCad = document.getElementById('password');
 const icon = eye.querySelector('i');
 let show = false;
 
@@ -8,12 +9,11 @@ let show = false;
 eye.addEventListener('click', () => {
     if(!show){
         icon.className = "bi bi-eye-slash-fill";
-        senha.type = "text";
-        show = !show;
+        senha.type = "text"; 
     }
     else {
         icon.className = "bi bi-eye-fill";
         senha.type = "password";
-        show = !show;
     }
+    show = !show;
 });

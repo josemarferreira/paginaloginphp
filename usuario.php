@@ -2,12 +2,14 @@
     class Usuario{
         private $first_name;
         private $last_name;
-        private $email;
 
-        function __construct($f_name, $l_name, $mail){
+        function __construct($f_name, $l_name){
             $this->first_name = $f_name;
             $this->last_name = $l_name;
-            $this->email = $mail;
+        }
+
+        public function showName() {
+            return $this->first_name . " " . $this->last_name;
         }
     }
 ?>

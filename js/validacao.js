@@ -45,7 +45,7 @@ function retirarErro(campo, info){
 }
 
 // Validar os Campos
-function solicitarValor(evento,campo, input, info, texto_info){
+function solicitarValor(evento, campo, input, info, texto_info){
     evento.preventDefault(); // pausa o evento de submit
     campo.className = "input-group erro";
     info.style.visibility = "visible";

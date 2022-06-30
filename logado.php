@@ -1,8 +1,10 @@
 <?php
+    require_once "usuario.php";
+
     session_start();
+    $user = new Usuario($_SESSION['first_name'], $_SESSION['last_name']);
 
     if(isset($_POST['sair'])){
-        echo "ok";
         session_destroy();
         header("Location:index.php");
     }
@@ -19,14 +21,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/logado.css">
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-
 </head>
 <body>
     <div id="logado">
         <form action="logado.php" method="post">
             <h1>Welcome<span class="dot">!</span></h1>
-            <h2>Josemar Souza</h2>
+            <h2><?php echo $user->showName(); ?></h2>
             <button type="submit" class="btn btn-confirm" name="sair">Sign Out</button>
         </form>      
     </div>

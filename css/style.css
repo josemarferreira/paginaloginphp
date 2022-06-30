@@ -1,6 +1,6 @@
-:root{
-    --gradient-dark: rgb(39,42,55);
-    --gradient-trans: rgba(39,42,55, 0.5);
+:root {
+    --gradient-dark: rgb(39, 42, 55);
+    --gradient-trans: rgba(39, 42, 55, 0.5);
     --blue-light: #5195EA;
     --text-light: #EDEDEE;
     --text-dark: #9C9DA2;
@@ -12,7 +12,7 @@
     --success: #9ef01a;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -20,39 +20,45 @@
     font-family: 'Sora', sans-serif;
 }
 
-html{ font-size: 62.5%;}
-body{
+html {
+    font-size: 62.5%;
+}
+
+body {
     font-size: 1.6rem;
     width: 100%;
     min-height: 100vh;
     background: url('../img/fundo_max.jpg') center/cover;
 }
 
-#fundo, #logado{
+#fundo,
+#logado {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, var(--gradient-dark) 0%,var(--gradient-dark) 45%, var(--gradient-trans) 100%);
+    background: linear-gradient(45deg, var(--gradient-dark) 0%, var(--gradient-dark) 45%, var(--gradient-trans) 100%);
     color: var(--text-light);
 }
 
 /* Ponto Final */
-.dot{color: var(--blue-light);}
+.dot {
+    color: var(--blue-light);
+}
 
 /* TOPO DA PÁGINA */
-#top{
+#top {
     width: 100%;
     padding: 4rem;
     display: flex;
 }
 
 /* LOGO */
-#logo{
+#logo {
     display: flex;
     align-items: center;
     margin-right: 9.5rem;
 }
 
-.box{
+.box {
     width: 24px;
     height: 24px;
     border-radius: 12px;
@@ -60,52 +66,56 @@ body{
     background-color: var(--blue-light);
 }
 
-.text-logo{font-weight: bold;}
+.text-logo {
+    font-weight: bold;
+}
 
 /* MENU */
-#menu{
+#menu {
     width: 160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#menu a{
+#menu a {
     font-size: 1.4rem;
     color: var(--text-dark);
     text-decoration: none;
     font-weight: bold;
 }
 
-#menu a:hover{ color: var(--blue-light);}
+#menu a:hover {
+    color: var(--blue-light);
+}
 
 /* CONTAINER */
-.container{
+.container {
     width: 100%;
     padding: 10rem 6.5rem;
 }
 
 /* CABEÇALHO SEÇÕES DO SITE */
-#banner{
+#banner {
     width: 100%;
     height: 140px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-#banner h3{
+#banner h3 {
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--text-dark);
 }
 
-#banner h1{
+#banner h1 {
     font-size: 3.6rem;
     font-weight: bold;
 }
 
-#banner p{
+#banner p {
     font-size: 1.4rem;
     font-weight: bold;
     color: var(--text-dark);
@@ -116,16 +126,18 @@ body{
     color: var(--blue-light);
 }
 
-#banner a:hover { color: var(--blue-dark);}
+#banner a:hover {
+    color: var(--blue-dark);
+}
 
 /* FORMULÁRIOS */
-#form-group{
+#form-group {
     width: 50%;
     margin: 15px 0;
 }
 
 /* CAIXA DE TEXTOS */
-.input-group{
+.input-group {
     width: 100%;
     position: relative;
     margin-top: 15px;
@@ -134,7 +146,7 @@ body{
     background-color: var(--bg-input);
 }
 
-.input-group input{
+.input-group input {
     font-size: 1.8rem;
     padding: 30px 20px 10px 20px;
     border: none;
@@ -146,9 +158,11 @@ body{
 }
 
 .input-group:hover,
-.input-group:focus-within{border-color: var(--blue-light);}
+.input-group:focus-within {
+    border-color: var(--blue-light);
+}
 
-.input-group label{
+.input-group label {
     font-size: 1.4rem;
     position: absolute;
     background-color: transparent;
@@ -159,11 +173,13 @@ body{
     color: var(--text-dark);
 }
 
-.input-group:focus-within label{color: var(--blue-light);}
+.input-group:focus-within label {
+    color: var(--blue-light);
+}
 
 /* Icone Nome do Usuário */
-.bi{
-    font-size: 20px;
+.bi {
+    font-size: 18px;
     position: absolute;
     top: 50%;
     right: 20px;
@@ -175,9 +191,9 @@ body{
 
 /* Icones Email e Senha */
 .bi-envelope-fill,
-.bi-eye-fill, 
-.bi-eye-slash-fill
-{
+.bi-eye-fill,
+.bi-eye-slash-fill,
+.bi-lock-fill {
     color: var(--text-light);
     background: transparent;
     z-index: 1;
@@ -185,14 +201,26 @@ body{
 }
 
 /* CAIXA ERROS */
-.erro, .erro:hover, .erro:focus-within {border-color: var(--danger);}
+.erro,
+.erro:hover,
+.erro:focus-within {
+    border-color: var(--danger);
+}
+
 .erro label,
 .erro:focus-within label,
-.erro span { color: var(--danger);}
+.erro span {
+    color: var(--danger);
+}
 
-#info_email, #info_senha{
+#info_email,
+#info_senha,
+#info_first,
+#info_last {
+    height: 10px;
+    padding: 2px 5px;
+    display: block;
     font-size: 1.2rem;
-    padding: 5px;
     color: var(--danger);
 }
 
@@ -205,13 +233,13 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(39,42,55, 0.8);
+    background-color: rgba(39, 42, 55, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal-content{
+.modal-content {
     width: 350px;
     padding: 40px;
     background-color: var(--bg-input);
@@ -226,7 +254,7 @@ body{
 }
 
 /* CHECKBOX */
-.input-checkbox{
+.input-checkbox {
     width: 24px;
     height: 24px;
     font-weight: bold;
@@ -239,23 +267,25 @@ body{
     background-color: var(--text-light);
 }
 
-.input-checkbox input{
+.input-checkbox input {
     width: 16px;
     height: 16px;
     outline: 2px solid var(--text-light);
 }
-.input-checkbox label{padding-left: 1rem;}
 
+.input-checkbox label {
+    padding-left: 1rem;
+}
 
 /* BOTÕES */
-#button{
+#button {
     width: 100%;
     display: flex;
     margin-top: 30px;
     justify-content: center;
 }
 
-.btn{
+.btn {
     width: 200px;
     border: none;
     border-radius: 3rem;
@@ -263,50 +293,66 @@ body{
     color: var(--text-light);
     font-weight: bold;
     font-size: 1.65rem;
-    box-shadow: 2px 2px 4px rgba(39,42,55, 0.5);
+    box-shadow: 2px 2px 4px rgba(39, 42, 55, 0.5);
     cursor: pointer;
 }
 
-.btn-modal{
+.btn-modal {
     margin-top: 15px;
     background-color: var(--danger);
 }
 
-.btn-confirm{background-color: var(--btn-confirm);}
-.btn-confirm:hover{background-color: var(--blue-light);}
+.btn-confirm {
+    background-color: var(--btn-confirm);
+}
 
-.btn:active{box-shadow:inset 2px 2px 4px rgba(39,42,55, 0.8);}
+.btn-confirm:hover {
+    background-color: var(--blue-light);
+}
+
+.btn:active {
+    box-shadow: inset 2px 2px 4px rgba(39, 42, 55, 0.8);
+}
 
 /* LINKS */
-.link{
+.link {
     text-decoration: none;
     color: var(--blue-light);
     font-weight: bold;
 }
 
-.link:hover{color: var(--blue-dark);}
+.link:hover {
+    color: var(--blue-dark);
+}
 
 
 @media screen and (max-width: 1024px) {
-    #form-group{width: 60%;}
+    #form-group {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 767px) {
-    #menu{display: none;}
-    .container{padding: 5rem 4rem;}
+    #menu {
+        display: none;
+    }
 
-    #top{
+    .container {
+        padding: 5rem 4rem;
+    }
+
+    #top {
         width: 100%;
         padding: 2rem;
         display: flex;
     }
 
-    #banner{
+    #banner {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; 
+        justify-content: space-between;
     }
 
     #banner h1 {
@@ -314,37 +360,46 @@ body{
         margin: 15px 0;
     }
 
-    #banner h3 {font-size: 1.6rem;}
+    #banner h3 {
+        font-size: 1.6rem;
+    }
 
-    #form-group{
+    #form-group {
         width: 100%;
         margin: 15px 0;
     }
 
-    .input-group input{ 
+    .input-group input {
         font-size: 1.4rem;
         width: 80%;
     }
 
-    .btn{width: 150px;}
+    .btn {
+        width: 150px;
+    }
 }
 
-@media screen and (max-width: 350px){
-    #menu{display: none;}
-    .container{padding: 5rem 4rem;}
+@media screen and (max-width: 350px) {
+    #menu {
+        display: none;
+    }
 
-    #top{
+    .container {
+        padding: 5rem 4rem;
+    }
+
+    #top {
         width: 100%;
         padding: 2rem;
         display: flex;
     }
 
-    #banner{
+    #banner {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; 
+        justify-content: space-between;
     }
 
     #banner h1 {
@@ -352,20 +407,29 @@ body{
         margin: 15px auto;
     }
 
-    #banner h3 {font-size: 1.6rem;}
-    #banner p{font-size: 1.2rem;}
+    #banner h3 {
+        font-size: 1.6rem;
+    }
 
-    #form-group{
+    #banner p {
+        font-size: 1.2rem;
+    }
+
+    #form-group {
         width: 100%;
         margin: 15px 0;
     }
 
-    .input-group input{ 
+    .input-group input {
         font-size: 1.4rem;
         width: 80%;
     }
 
-    .link{font-size: 1.2rem;}
+    .link {
+        font-size: 1.2rem;
+    }
 
-    .btn{width: 150px;}
+    .btn {
+        width: 150px;
+    }
 }
